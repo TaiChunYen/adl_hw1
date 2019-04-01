@@ -101,7 +101,8 @@ class BasePredictor():
 
     def load(self, path):
         # TODO: Load saved model from path here.
-        torch.load(path)
+        self.model.load_state_dict(torch.load(path)['model'])
+        #self.optimizer.load_state_dict(torch.load(path)['optimizer'])
         self.model.eval()
 
     def _run_epoch(self, dataloader, training):
