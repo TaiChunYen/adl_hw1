@@ -17,7 +17,7 @@ class DialogDataset(Dataset):
     """
     def __init__(self, data, padding=0,
                  n_negative=4, n_positive=1,
-                 context_padded_len=500, option_padded_len=50, shuffle=True):
+                 context_padded_len=500, option_padded_len=300, shuffle=True):
         self.data = data
         self.n_positive = n_positive
         self.n_negative = n_negative

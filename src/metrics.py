@@ -45,6 +45,7 @@ class Recall(Metrics):
         # - increase self.n_corrects based on the prediction and labels
         #   of the batch.	
         self.n += predicts.size()[0]
+        
         if(predicts.size()[1]<self.at+1):
              self.n_corrects += predicts.size()[0]
         else:

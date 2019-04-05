@@ -13,9 +13,10 @@ class LSTM(torch.nn.Module):
     def __init__(self, dim_embeddings,
                  similarity='inner_product'):
         super(LSTM, self).__init__()
-        self.lstm = torch.nn.RNN(dim_embeddings, 256)
-        self.lstm2 = torch.nn.RNN(dim_embeddings, 256)
-        
+        self.lstm = torch.nn.LSTM(dim_embeddings, 256)
+        self.lstm2 = torch.nn.LSTM(dim_embeddings, 256)
+        #self.bn = torch.nn.BatchNorm1d(256)
+        #self.bn2 = torch.nn.BatchNorm1d(256)
         self.m = torch.nn.Bilinear(256,256,1)
         
         self.emb=dim_embeddings

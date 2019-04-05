@@ -28,6 +28,9 @@ def main(args):
     elif config['arch'] == 'LSTM':
         from lstm_predictor import LstmPredictor
         PredictorClass = LstmPredictor
+    elif config['arch'] == 'Attension':
+        from atten_predictor import AttenPredictor
+        PredictorClass = AttenPredictor
 
     predictor = PredictorClass(metrics=[],
                                **config['model_parameters'])
