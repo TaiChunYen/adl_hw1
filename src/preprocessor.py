@@ -3,8 +3,11 @@ import json
 from multiprocessing import Pool
 from dataset import DialogDataset
 from tqdm import tqdm
-from nltk.tokenize import word_tokenize
-
+#from nltk.tokenize import word_tokenize
+#from nltk.tokenize import WordPunctTokenizer
+import nltk
+#import spacy
+import pdb
 
 class Preprocessor:
     """
@@ -14,6 +17,7 @@ class Preprocessor:
     """
     def __init__(self, embedding):
         self.embedding = embedding
+        
         #self.logging = logging.getLogger(name=__name__)
 
     def tokenize(self, sentence):
@@ -23,9 +27,20 @@ class Preprocessor:
         Return:
             indices (list of str): List of tokens in a sentence.
         """        
-        # TODO        
-        token = word_tokenize(sentence)
-        return token
+        # TODO
+        
+        
+        pattern = r"""(?x)\
+                  (?:[A-Z]\.)+\
+                  |\d+(?:\.\d+)?%?|\w+(?:[-']\w+)*|\.\.\.|(?:[.,;"'?():-_`])"""                  
+                             
+        tokens=nltk.regexp_tokenize(sentence,pattern) 
+
+                                                                                                        
+        #tokens = WordPunctTokenizer().tokenize(sentence)
+        
+        #pdb.set_trace()
+        return tokens
 
     def sentence_to_indices(self, sentence):
         """ Convert sentence to its word indices.
@@ -38,8 +53,11 @@ class Preprocessor:
         # Hint: You can use `self.embedding`
         
         indices=[]
+        #unknow=self.embedding.to_index('<unk>')
         for word in self.tokenize(sentence):
-            indices.append(self.embedding.to_index(word))   
+            indice=self.embedding.to_index(word)            
+                
+            indices.append(indice)   
                
         return indices
 
@@ -63,9 +81,9 @@ class Preprocessor:
         with Pool(n_workers) as pool:
             chunks = pool.map_async(self.tokenize, chunks)
             words = set(sum(chunks.get(), []))
-        #chunks="".join(chunks)#
-        #chunks=self.tokenize(chunks)#
-        #words = set(chunks)#
+
+		
+        
 
         return words
 

@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 class BasePredictor():
     def __init__(self,
-                 batch_size=100,
+                 batch_size=32,
                  max_epochs=20,
                  valid=None,
                  device=None,

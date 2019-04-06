@@ -33,6 +33,7 @@ class AttenPredictor(BasePredictor):#also call basepredictor function
         self.loss = {
             'BCELoss': torch.nn.BCEWithLogitsLoss()
         }[loss]
+        #self.loss = torch.nn.MultiLabelSoftMarginLoss()
         
 
     def _run_iter(self, batch, training):

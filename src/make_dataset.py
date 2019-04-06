@@ -79,7 +79,7 @@ def _parse_args():
         description="Preprocess and generate preprocessed pickle.")
     parser.add_argument('dest_dir', type=str,
                         help='[input] Path to the directory that .')
-    parser.add_argument('--n_workers', type=int, default=1)
+    parser.add_argument('--n_workers', type=int, default=4)
     args = parser.parse_args()
     return args
 
