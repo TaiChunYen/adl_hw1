@@ -1,11 +1,14 @@
-#Multiple choice question chatbot
+Multiple choice question chatbot
+========
 
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/lstm_chatbot.jpg)
 
-###data:
+data:
+_______
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/dataformat.jpg)
 
-###preprocess:
+preprocess:
+____
 python3.6 make_dataset.py dir/for/data/config.json(dir for data) 
 
 make_dataset.py 
@@ -21,10 +24,12 @@ python3.6 make_dataset_test.py test/data/name
 introdution:
 use ./embedding.pkl to preprocess test data to test.pkl
 
-###model:
+model:
+____
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/model_struct.jpg)
 
-###train:
+train:
+___
 python3.6 train.py dir/for/models/config.json
 
 train.py
@@ -38,7 +43,8 @@ train.py
 introduction:
 save trained model to model.pkl
 
-###predict:
+predict:
+__________________________
 python3.6 predict.py dir/for/models/config.json --epoch x(the save model of which epoch to use)
 
 introduction:
