@@ -1,5 +1,4 @@
 # Multiple choice question chatbot
-========
 
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/lstm_chatbot.jpg)
 
