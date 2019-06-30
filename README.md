@@ -56,3 +56,8 @@ introduction:
 save predict result to predict-x.csv
 
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/outputformat.jpg)
+
+## result:
+__________________________
+
+
