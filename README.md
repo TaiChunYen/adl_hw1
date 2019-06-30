@@ -8,7 +8,8 @@ _______
 
 ## preprocess:
 ____
-python3.6 make_dataset.py dir/for/data/config.json(dir for data) 
+python3.6 make_dataset.py dir/for/data/config.json(dir for data)  
+
 <br/>
 make_dataset.py 
 <p align="left">|--embedding.py(make embedding with word vector and words made by preprocessor.collect_words)</p>
