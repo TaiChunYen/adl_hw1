@@ -60,4 +60,9 @@ save predict result to predict-x.csv
 ## result:
 __________________________
 
+![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/kaggle.jpg)
 
+![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/result.png)  
+<br/>
+<br/>
+recall@10:0.79
