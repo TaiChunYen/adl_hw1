@@ -17,7 +17,7 @@ make_dataset.py
 <p align="left">| |--dataset.py(add speaker before sentences can improve model preformace)</p>
 
 introdution:
-preprocess data to train.pkl,valid.pkl,embedding.pkl for model training
+preprocess data to train.pkl,valid.pkl,embedding.pkl for model training  
 
 python3.6 make_dataset_test.py test/data/name
 
