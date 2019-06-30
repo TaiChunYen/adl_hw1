@@ -1,4 +1,4 @@
-Multiple choice question chatbot
+<center><font size="5">Multiple choice question chatbot</font><br /> </center>
 
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/lstm_chatbot.jpg)
 
@@ -9,9 +9,9 @@ preprocess:
 python3.6 make_dataset.py dir/for/data/config.json(dir for data) 
 
 make_dataset.py 
-|--embedding.py	//make embedding with word vector and words made by preprocessor.collect_words	 
-|--preprocessor.py	//provide preprocess function
-  |--dataset.py	//add speaker before sentences can improve model preformace
+<p align="left">|--embedding.py	//make embedding with word vector and words made by preprocessor.collect_words</p>
+<p align="left">|--preprocessor.py	//provide preprocess function</p>
+<p align="left">  |--dataset.py	//add speaker before sentences can improve model preformace</p>
 
 introdution:
 preprocess data to train.pkl,valid.pkl,embedding.pkl for model training
@@ -28,12 +28,12 @@ train:
 python3.6 train.py dir/for/models/config.json
 
 train.py
-|--base_predictor.py
-| |--example_predictor.py
-| |--lstm_predictor.py
-| |--atten_predictor.py
-|--callbacks.py
-|--metrics.py
+<p align="left">|--base_predictor.py</p>
+<p align="left">| |--example_predictor.py</p>
+<p align="left">| |--lstm_predictor.py</p>
+<p align="left">| |--atten_predictor.py</p>
+<p align="left">|--callbacks.py</p>
+<p align="left">|--metrics.py</p>
 
 introduction:
 save trained model to model.pkl
