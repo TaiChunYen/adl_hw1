@@ -12,9 +12,9 @@ ____
 python3.6 make_dataset.py dir/for/data/config.json(dir for data) 
 
 make_dataset.py 
-<p align="left">|--embedding.py	//make embedding with word vector and words made by preprocessor.collect_words</p>
-<p align="left">|--preprocessor.py	//provide preprocess function</p>
-<p align="left">| |--dataset.py	//add speaker before sentences can improve model preformace</p>
+<p align="left">|--embedding.py(make embedding with word vector and words made by preprocessor.collect_words)</p>
+<p align="left">|--preprocessor.py(provide preprocess function)</p>
+<p align="left">| |--dataset.py(add speaker before sentences can improve model preformace)</p>
 
 introdution:
 preprocess data to train.pkl,valid.pkl,embedding.pkl for model training
