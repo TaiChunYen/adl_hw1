@@ -30,7 +30,7 @@ ____
 ## train:
 ___
 python3.6 train.py dir/for/models/config.json
-<br/>
+&nbsp;
 train.py
 <p align="left">|--base_predictor.py</p>
 <p align="left">| |--example_predictor.py</p>
@@ -45,7 +45,7 @@ save trained model to model.pkl
 ## predict:
 __________________________
 python3.6 predict.py dir/for/models/config.json --epoch x(the save model of which epoch to use)
-<br/>
+&nbsp;
 introduction:
 save predict result to predict-x.csv
 
