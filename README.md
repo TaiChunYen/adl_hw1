@@ -5,6 +5,7 @@
 ## data:
 _______
 ![image](https://github.com/TaiChunYen/adl_hw1/blob/master/picture/dataformat.jpg)
+every one quation has 100 candidates
 
 ## preprocess:
 ____
